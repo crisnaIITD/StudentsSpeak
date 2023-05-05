@@ -1,0 +1,21 @@
+{% extends 'home/base.html' %}
+
+{% block title %} StudentsSpeak {% endblock %}
+
+{% block body %}
+
+{% for speak in speaks %}
+    <a href="{% url 'home:detail' speak.who_speaks %}" class="max-w-lg mx-auto mt-8 bg-white shadow-lg rounded-lg overflow-hidden block">
+        <div class="px-4 py-2 flex flex-col">
+            <h4 class="text-gray-900 font-semibold text-lg">{{ speak.who_speaks }}</h4>
+            <p class="text-gray-600 mt-2">{{ speak.speak_box }}</p>
+            <div class="flex-grow"></div>
+            <p class="text-gray-600 text-right text-xs mt-2">{{ speak.speak_time }}</p>
+        </div>
+    </a>
+{% endfor %}
+
+
+
+
+{% endblock %}

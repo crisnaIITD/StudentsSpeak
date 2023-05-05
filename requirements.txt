@@ -1,0 +1,4 @@
+asgiref @ file:///Users/cbousseau/work/recipes/ci_py311/asgiref_1677957028708/work
+certifi @ file:///Users/cbousseau/work/recipes/ci_py311/certifi_1677903144932/work/certifi
+Django @ file:///Users/cbousseau/work/recipes/ci_py311/django_1677970851911/work
+sqlparse @ file:///Users/cbousseau/work/recipes/ci_py311/sqlparse_1677962074223/work

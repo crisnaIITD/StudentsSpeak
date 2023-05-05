@@ -1,0 +1,23 @@
+{% extends 'home/base.html' %}
+
+{% block title %} {{speaker_posts.who_speaks}}  {% endblock %}
+
+{% block body %}
+
+
+
+
+{% for info in speaker_posts %}
+    <a href="#" class="max-w-lg mx-auto mt-8 bg-white shadow-lg rounded-lg overflow-hidden block">
+        <div class="px-4 py-2 flex flex-col">
+            <h4 class="text-gray-900 font-semibold text-lg">{{ speaker_name }}</h4>
+            <p class="text-gray-600 mt-2">{{ info.speak_box }}</p>
+            <div class="flex-grow"></div>
+            <p class="text-gray-600 text-right text-xs mt-2">{{ info.speak_time }}</p>
+        </div>
+    </a>
+{% endfor %}
+
+
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'home/base.html' %}
+
+{% block title %} Create a post {% endblock %}
+
+{% block body %}
+
+
+<div class="flex justify-center items-center h-screen bg-gray-200">
+    <form action="" method="post" class="max-w-md w-full bg-white shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
+        {% csrf_token %}
+        <div class="mb-4">
+            <label class="sr-only" for="{{ post_form.who_speaks.id }}">Name</label>
+            <input id="{{ post_form.who_speaks.id }}" class="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:border-blue-500 text-gray-700" type="text" name="{{ post_form.who_speaks.name }}" placeholder="Name" required>
+        </div>
+        <div class="mb-6">
+            <label class="sr-only" for="{{ post_form.speak_box.id }}">Post</label>
+            <textarea id="{{ post_form.speak_box.id }}" class="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:border-blue-500 text-gray-700" name="{{ post_form.speak_box.name }}" placeholder="Post" rows="5" required></textarea>
+        </div>
+        <div class="flex items-center justify-center">
+            <button class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none" type="submit">
+                Post
+            </button>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+{% endblock %}
